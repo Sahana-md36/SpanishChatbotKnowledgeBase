@@ -40,7 +40,8 @@ Settings.embed_model = GeminiEmbedding(
     model_name="models/embedding-001", api_key=api_key
 )
 
-Settings.llm = Gemini(api_key=api_key,safety_settings=safety_settings, temperature=0)
+#Settings.llm = Gemini(api_key=api_key,safety_settings=safety_settings, temperature=0)
+Settings.llm = Gemini(model_name="models/gemini-1.5-pro", api_key=api_key,safety_settings=safety_settings, temperature=0)
 
 
 if not os.path.exists(index_storage_dir):
